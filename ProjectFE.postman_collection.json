@@ -1,0 +1,1275 @@
+{
+	"info": {
+		"_postman_id": "b3e1b524-8b29-4f8b-be0c-9d7ad3a15983",
+		"name": "ProjectFE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24733741"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\":\"test\",\r\n  \"email\":\"test@gmail.com\",\r\n  \"password\":\"1234\",\r\n  \"phone\":\"0123456789\",\r\n  \"birthDay\": \"1/12/2023\",\r\n  \"gender\":\"male\",\r\n  \"role\":\"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/users/register",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\":\"test@gmail.com\",\r\n  \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/users/login",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Upload",
+			"item": [
+				{
+					"name": "Upload Image",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE2NzY3MTM2MjksImV4cCI6MTY3Njc1NjgyOX0.GG85kTicAXrcvalPEM48mfTFFXub6S0btrcCxOILzqE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/upload",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "Get Comments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3NjcxMzc2OCwiZXhwIjoxNjc2NzU2OTY4fQ.Z0QUe7bWvT3ENvXI79h04n3iLSPngX_IntDTgUIVvP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/comments/get-comments",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"comments",
+								"get-comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJtb3RAZ21haWwuY29tIiwiaWF0IjoxNjc2Njg2MjIxLCJleHAiOjE2NzY3Mjk0MjF9.E5Oc8Kt67PdPq9WqC1hM96ibTRHvZVjWi1PIl_zAyoY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"roomId\":4,\r\n  \"content\":\"Test Comment Id\",\r\n  \"rateComment\":\"4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/comments/create-comment",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"comments",
+								"create-comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Comments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3NjcxMzc2OCwiZXhwIjoxNjc2NzU2OTY4fQ.Z0QUe7bWvT3ENvXI79h04n3iLSPngX_IntDTgUIVvP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"roomId\":3,\r\n  \"content\":\"First updated comment\",\r\n  \"rateComment\":\"4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/comments/update-comment/1",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"comments",
+								"update-comment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3NjcxMzc2OCwiZXhwIjoxNjc2NzU2OTY4fQ.Z0QUe7bWvT3ENvXI79h04n3iLSPngX_IntDTgUIVvP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/comments/delete-comment/1",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"comments",
+								"delete-comment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Comment By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3NjcxMzc2OCwiZXhwIjoxNjc2NzU2OTY4fQ.Z0QUe7bWvT3ENvXI79h04n3iLSPngX_IntDTgUIVvP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/comments/get-comment-by-id/3",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"comments",
+								"get-comment-by-id",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Room",
+			"item": [
+				{
+					"name": "Create Room",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3NjcxMzc2OCwiZXhwIjoxNjc2NzU2OTY4fQ.Z0QUe7bWvT3ENvXI79h04n3iLSPngX_IntDTgUIVvP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tenPhong\":\"Room 2\",\r\n  \"khach\":4,\r\n  \"phongNgu\":1,\r\n  \"giuong\":2,\r\n  \"phongTam\":2,\r\n  \"moTa\":\"mo Ta\",\r\n  \"giaTien\":100,\r\n  \"mayGiat\":false,\r\n  \"banLa\":false,\r\n  \"tivi\":true,\r\n  \"dieuHoa\":true,\r\n  \"wifi\":true,\r\n  \"bep\":false,\r\n  \"doXe\":true,\r\n  \"hoBoi\":true,\r\n  \"hinhAnh\":\"https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/377506722.jpg?k=7fd8eba1c43ae00d4e0b4cf4fb6418baec5839325055f735a8f8ffcddbd3371c&o=\",\r\n  \"locationId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/rooms/create-room",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rooms",
+								"create-room"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Rooms",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3NjcxMzc2OCwiZXhwIjoxNjc2NzU2OTY4fQ.Z0QUe7bWvT3ENvXI79h04n3iLSPngX_IntDTgUIVvP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/rooms/get-room",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rooms",
+								"get-room"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Room By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3NjcxMzc2OCwiZXhwIjoxNjc2NzU2OTY4fQ.Z0QUe7bWvT3ENvXI79h04n3iLSPngX_IntDTgUIVvP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/rooms/get-room-by-id/4",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rooms",
+								"get-room-by-id",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Room By Location Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3NjcxMzc2OCwiZXhwIjoxNjc2NzU2OTY4fQ.Z0QUe7bWvT3ENvXI79h04n3iLSPngX_IntDTgUIVvP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/rooms/get-room-by-location-id/3",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rooms",
+								"get-room-by-location-id",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Room Paginate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3NjcxMzc2OCwiZXhwIjoxNjc2NzU2OTY4fQ.Z0QUe7bWvT3ENvXI79h04n3iLSPngX_IntDTgUIVvP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"pageIndex\": 1,\r\n  \"pageSize\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/rooms/room-paginate",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rooms",
+								"room-paginate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Room By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3NjcxMzc2OCwiZXhwIjoxNjc2NzU2OTY4fQ.Z0QUe7bWvT3ENvXI79h04n3iLSPngX_IntDTgUIVvP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/rooms/get-room-by-id/3",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rooms",
+								"get-room-by-id",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Room",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3NjcxMzc2OCwiZXhwIjoxNjc2NzU2OTY4fQ.Z0QUe7bWvT3ENvXI79h04n3iLSPngX_IntDTgUIVvP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tenPhong\":\"Room 1 test update\",\r\n  \"khach\":4,\r\n  \"phongNgu\":2,\r\n  \"giuong\":3,\r\n  \"phongTam\":2,\r\n  \"moTa\":\"mo Ta\",\r\n  \"giaTien\":200,\r\n  \"mayGiat\":false,\r\n  \"banLa\":false,\r\n  \"tivi\":true,\r\n  \"dieuHoa\":true,\r\n  \"wifi\":true,\r\n  \"bep\":false,\r\n  \"doXe\":true,\r\n  \"hoBoi\":true,\r\n  \"hinhAnh\":\"https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/377506722.jpg?k=7fd8eba1c43ae00d4e0b4cf4fb6418baec5839325055f735a8f8ffcddbd3371c&o=\",\r\n  \"locationId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/rooms/update-room/3",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rooms",
+								"update-room",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Room",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJtb3RAZ21haWwuY29tIiwiaWF0IjoxNjc2Njg3Njk3LCJleHAiOjE2NzY3MzA4OTd9.TL2OFbqszELnyu8UTKQ8hoSNvZfMRY51tXK2prjEDXE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/rooms/delete-room/3",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rooms",
+								"delete-room",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Location",
+			"item": [
+				{
+					"name": "Create Location",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJtb3RAZ21haWwuY29tIiwiaWF0IjoxNjc2Njg2MjIxLCJleHAiOjE2NzY3Mjk0MjF9.E5Oc8Kt67PdPq9WqC1hM96ibTRHvZVjWi1PIl_zAyoY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\":\"Quan 2\",\r\n  \"province\":\"Ho Chi Minh\",\r\n  \"country\":\"Viet Nam\",\r\n  \"image\":\"https://mogivi-blog.azureedge.net/media/1227/khu-do-thi-quan-2-1.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/locations/create-location",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"locations",
+								"create-location"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Location",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3NjcxMzc2OCwiZXhwIjoxNjc2NzU2OTY4fQ.Z0QUe7bWvT3ENvXI79h04n3iLSPngX_IntDTgUIVvP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/locations/get-location",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"locations",
+								"get-location"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Location Paginate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJtb3RAZ21haWwuY29tIiwiaWF0IjoxNjc2Njg3Njk3LCJleHAiOjE2NzY3MzA4OTd9.TL2OFbqszELnyu8UTKQ8hoSNvZfMRY51tXK2prjEDXE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"pageSize\":1,\r\n  \"pageIndex\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/locations/location-paginate",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"locations",
+								"location-paginate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Location By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3NjcxMzc2OCwiZXhwIjoxNjc2NzU2OTY4fQ.Z0QUe7bWvT3ENvXI79h04n3iLSPngX_IntDTgUIVvP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/locations/get-location-by-id/3",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"locations",
+								"get-location-by-id",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Location",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3NjcxMzc2OCwiZXhwIjoxNjc2NzU2OTY4fQ.Z0QUe7bWvT3ENvXI79h04n3iLSPngX_IntDTgUIVvP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Quan 3 Update \",\r\n  \"province\": \"Ho Chi Minh City\",\r\n  \"country\": \"Viet Nam\",\r\n  \"image\": \"https://mogivi-blog.azureedge.net/media/1227/khu-do-thi-quan-2-1.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/locations/update-location/2",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"locations",
+								"update-location",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Location",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3NjcxMzc2OCwiZXhwIjoxNjc2NzU2OTY4fQ.Z0QUe7bWvT3ENvXI79h04n3iLSPngX_IntDTgUIVvP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/locations/delete-location/2",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"locations",
+								"delete-location",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "Create Booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3NjcxMzc2OCwiZXhwIjoxNjc2NzU2OTY4fQ.Z0QUe7bWvT3ENvXI79h04n3iLSPngX_IntDTgUIVvP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"roomId\": 7,\r\n  \"checkInDate\": \"2/2/2023\" ,\r\n  \"checkOutDate\": \"3/2/2023\",\r\n  \"numberCustomer\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/bookings/create-booking",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bookings",
+								"create-booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3NjcxMzc2OCwiZXhwIjoxNjc2NzU2OTY4fQ.Z0QUe7bWvT3ENvXI79h04n3iLSPngX_IntDTgUIVvP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/bookings/get-booking",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bookings",
+								"get-booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Booking By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/bookings/get-booking-by-id/2",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bookings",
+								"get-booking-by-id",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Booking",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3NjcxMzc2OCwiZXhwIjoxNjc2NzU2OTY4fQ.Z0QUe7bWvT3ENvXI79h04n3iLSPngX_IntDTgUIVvP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"roomId\": 4,\r\n  \"checkInDate\": \"1/8/2023\",\r\n  \"checkOutDate\": \"1/9/2023\",\r\n  \"numberCustomer\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/bookings/update-booking/2",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bookings",
+								"update-booking",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Booking",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/bookings/delete-booking/3",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bookings",
+								"delete-booking",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Booking By User Id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3NjcxMzc2OCwiZXhwIjoxNjc2NzU2OTY4fQ.Z0QUe7bWvT3ENvXI79h04n3iLSPngX_IntDTgUIVvP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/users",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3NjcxMzc2OCwiZXhwIjoxNjc2NzU2OTY4fQ.Z0QUe7bWvT3ENvXI79h04n3iLSPngX_IntDTgUIVvP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/users/delete-user/2",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"delete-user",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Paginate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJtb3RAZ21haWwuY29tIiwiaWF0IjoxNjc2Njg3Njk3LCJleHAiOjE2NzY3MzA4OTd9.TL2OFbqszELnyu8UTKQ8hoSNvZfMRY51tXK2prjEDXE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"pageIndex\":0,\r\n  \"pageSize\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/users/user-paginate",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"user-paginate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3NjcxMzc2OCwiZXhwIjoxNjc2NzU2OTY4fQ.Z0QUe7bWvT3ENvXI79h04n3iLSPngX_IntDTgUIVvP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/users/get-user-by-id/4",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"get-user-by-id",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3NjcxMzc2OCwiZXhwIjoxNjc2NzU2OTY4fQ.Z0QUe7bWvT3ENvXI79h04n3iLSPngX_IntDTgUIVvP0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Update test user\",\r\n  \"email\": \"test@gmail.com\",\r\n  \"password\": \"1234\",\r\n  \"phone\": \"0123456789\",\r\n  \"birthDay\": \"1/12/2023\",\r\n  \"gender\": \"female\",\r\n  \"role\": \"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/users/update-user",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"update-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://minhtri-node26-projectfe.up.railway.app/api/v1/users/get-users-by-name/m",
+							"protocol": "https",
+							"host": [
+								"minhtri-node26-projectfe",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"get-users-by-name",
+								"m"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
