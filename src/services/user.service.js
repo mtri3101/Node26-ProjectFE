@@ -90,7 +90,7 @@ const getUserById = async (userId) => {
             where: {
                 id: userId
             }
-            , include: ["owner", "user_booking", "userComments"]
+            , include: ["owner", "user_booking", "roomComments"]
         })
         if (!user) {
             throw new AppError(404, "User not found !")
