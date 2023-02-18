@@ -21,7 +21,7 @@ const createBooking = async (token, data) => {
         if (checkInDate > checkOutDate) {
             throw new AppError(400, "Check out date is not valid")
         }
-        const booking = await room.addBooking_room(token.id, {
+        const booking = await room.addUserBooking(token.id, {
             through: {
                 roomId: data.roomId,
                 checkInDate: checkInDate,
@@ -31,6 +31,7 @@ const createBooking = async (token, data) => {
         })
         return booking
     } catch (error) {
+        console.log(error)
         throw error
     }
 }
