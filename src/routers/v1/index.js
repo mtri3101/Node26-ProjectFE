@@ -59,4 +59,6 @@ v1.get("/locations/get-location-by-id/:locationId", authorization, locationContr
 v1.put("/locations/update-location/:locationId", authorization, locationController.updateLocation())
 v1.delete("/locations/delete-location/:locationId", authorization, requiredRole("admin"), locationController.deleteLocation())
 
+//Upload 
+v1.post("/upload", authorization, upload.single("file"), uploadController.upload())
 module.exports = v1;

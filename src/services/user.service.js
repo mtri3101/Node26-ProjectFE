@@ -1,4 +1,5 @@
 const { Op } = require("sequelize");
+const { upload } = require("../controllers/upload.controller");
 const { AppError } = require("../helpers/error");
 const { User } = require("../models")
 
@@ -89,7 +90,7 @@ const getUserById = async (userId) => {
             where: {
                 id: userId
             }
-            , include: ["owner","user_booking","userComments"]
+            , include: ["owner", "user_booking", "userComments"]
         })
         if (!user) {
             throw new AppError(404, "User not found !")
@@ -140,5 +141,5 @@ module.exports = {
     userPaginate,
     getUserById,
     updateUser,
-    getUsersByName
+    getUsersByName,
 }
