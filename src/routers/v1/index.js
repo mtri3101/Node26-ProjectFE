@@ -44,7 +44,7 @@ v1.post("/users/upload/", authorization, upload.single("file"), uploadController
 //Room
 v1.post("/rooms/create-room", authorization, roomController.createRoom())
 v1.get("/rooms/get-room", authorization, roomController.getRooms())
-v1.get("/rooms/get-room-by-location-id/:locationId", roomController.getRoomsByLocationId())
+v1.get("/rooms/get-room-by-location-id/:locationId", authorization, roomController.getRoomsByLocationId())
 v1.get("/rooms/room-paginate", authorization, roomController.roomPaginate())
 v1.get("/rooms/get-room-by-id/:roomId", authorization, roomController.getRoomById())
 v1.put("/rooms/update-room/:roomId", authorization, roomController.updateRoom())
