@@ -55,7 +55,7 @@ const getRoomById = () => {
             const { roomId } = req.params;
             const room = await roomService.getRoomById(roomId);
             res.status(200).json(response(room))
-        } catch {
+        } catch (error) {
             next(error)
         }
     }
